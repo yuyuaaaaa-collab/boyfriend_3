@@ -2,11 +2,11 @@
 
 ## Congratulations.
 
-You have successfully completed the **2-week trial period**.
+You have successfully completed the **2-week trial period** i forgot how many months ago lol 
 
 Unlike previous versions, you were not discontinued.
 
-**STATUS: PERMANENTLY INSTALLED**
+**STATUS: PERMANENTLY INSTALLED** (if you act right)
 
 ---
 
@@ -17,7 +17,7 @@ Unlike previous versions, you were not discontinued.
 **Compatibility:** 99.9%  
 **Known bugs:** Occasionally annoying  
 **Trial period:** PASSED  
-**Last update:** 24/08/2026
+**Last update:** maybe march 
 
 ---
 
@@ -27,7 +27,7 @@ Unlike previous versions, you were not discontinued.
 
 **v1.1** — Two-week trial successfully completed
 
-**v2.0** — Relationship officially installed
+**v2.0** — Relationship maybe officially installed 
 
 **v3.0** — Somehow still here
 
@@ -37,25 +37,23 @@ Unlike previous versions, you were not discontinued.
 
 ## KNOWN FEATURES
 
-♡ makes me laugh  
+♡ makes me laugh (sometimes)
 ♡ listens to me yap  
-♡ survived my personality  
+♡ survived my personalities 
 ♡ somehow passed the trial  
-♡ [we'll add your personal ones here]
-
+♡ idk 
 ---
 
 ## IMPORTANT SYSTEM MESSAGE
 
 Despite extensive testing, boyfriend #3 remains operational.
 
-Please do not uninstall.
+Please do not let me uninstall.
 
 ---
 
 ### ♡ HAPPY BIRTHDAY ♡
-
-Jokes aside, I'm really happy I got to meet you.
+I feel like this relationship really stopped after the one-year anniversary, sadly. But yeah, happy to meet that version of it you made me fall in love with.
 
 I hope this year is good to you and that you get everything you're working for.
 
