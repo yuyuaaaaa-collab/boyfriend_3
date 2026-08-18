@@ -454,9 +454,12 @@
   const heartCount = document.querySelector("#heart-count");
 
   let collected = 0;
+const heartSound = new Audio("heart-pop.mp3");
+heart.addEventListener("click", function () {
+  heartSound.currentTime = 0;
+  heartSound.play();
 
-  heart.addEventListener("click", function () {
-    collected++;
+  collected++; 
 
     heartCount.textContent = collected;
 
