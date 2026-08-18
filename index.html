@@ -254,55 +254,70 @@
 }
 
 /* The two rounded top bubbles */
-.game-heart::after {
-  content: "";
-
+.game-heart {
   position: absolute;
+  left: 50%;
+  top: 50%;
 
-  width: 38px;
-  height: 38px;
+  width: 85px;
+  height: 85px;
 
-  left: 4px;
-  top: 8px;
+  padding: 0;
+  border: none;
+  background: transparent;
 
-  background: #f9c9da;
+  cursor: pointer;
 
-  border-radius: 50%;
+  animation: bubbleFloat 1.8s ease-in-out infinite;
 
-  box-shadow:
-    inset 5px 5px 8px rgba(255,255,255,0.7),
-    0 2px 4px rgba(180,100,130,0.12);
+  filter:
+    drop-shadow(0 8px 8px rgba(150, 70, 100, 0.22))
+    drop-shadow(0 0 12px rgba(255, 190, 215, 0.55));
 
-  z-index: -1;
+  transition:
+    left 0.35s ease,
+    top 0.35s ease;
 }
 
-/* Puffy floating movement */
-@keyframes bubbleHeart {
+.game-heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.game-heart:hover {
+  animation: bubbleWiggle 0.55s ease-in-out infinite;
+
+  filter:
+    drop-shadow(0 10px 10px rgba(150, 70, 100, 0.25))
+    drop-shadow(0 0 20px rgba(255, 190, 215, 0.85));
+}
+
+@keyframes bubbleFloat {
   0%, 100% {
     transform: translateY(0) scale(1);
   }
 
   50% {
-    transform: translateY(-7px) scale(1.06);
+    transform: translateY(-6px) scale(1.05);
   }
 }
 
-.game-heart:hover {
-  filter:
-    drop-shadow(0 12px 10px rgba(160, 90, 115, 0.25))
-    drop-shadow(0 0 18px rgba(255, 205, 220, 0.8));
-
-  animation: bubbleHeartHover 0.7s ease-in-out infinite;
-}
-
-@keyframes bubbleHeartHover {
+@keyframes bubbleWiggle {
   0%, 100% {
-    transform: scale(1.08) rotate(0deg);
+    transform: rotate(0deg) scale(1.08);
   }
 
-  50% {
-    transform: scale(1.15) rotate(-3deg);
+  25% {
+    transform: rotate(-5deg) scale(1.12);
   }
+
+  75% {
+    transform: rotate(5deg) scale(1.12);
+  }
+}
 }  @media (max-width: 600px) {
       .hero h1 {
         font-size: 32px;
@@ -525,7 +540,9 @@
   </div>
 
   <div id="heart-game-area">
-    <button class="game-heart" aria-label="Collect heart">♡</button>
+    <button class="game-heart" aria-label="Collect heart">
+  <img src="pink-heart.png" alt="">
+</button>
   </div>
 
 </section>
