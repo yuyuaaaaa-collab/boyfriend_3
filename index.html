@@ -199,120 +199,111 @@
   overflow: hidden;
   margin-top: 20px;
 }
-   
-   .game-heart {
+  .game-heart {
   position: absolute;
   left: 50%;
   top: 50%;
 
-  width: 70px;
-  height: 70px;
+  width: 78px;
+  height: 78px;
 
   border: none;
   background: transparent;
 
-  color: #f7b6cc;
   font-size: 0;
-
   cursor: pointer;
 
+  animation: bubbleHeart 1.8s ease-in-out infinite;
+
   filter:
-    drop-shadow(0 8px 8px rgba(150, 70, 100, 0.22))
-    drop-shadow(0 0 12px rgba(255, 190, 215, 0.65));
+    drop-shadow(0 10px 8px rgba(160, 90, 115, 0.22))
+    drop-shadow(0 0 10px rgba(255, 205, 220, 0.55));
 
-  animation: heartPulse 1.2s ease-in-out infinite;
-
-  transition: left 0.35s ease, top 0.35s ease;
+  transition: left 0.4s ease, top 0.4s ease;
 }
 
-/* Creates the heart shape */
+/* Main inflated heart */
 .game-heart::before {
-  content: "♥";
+  content: "";
 
   position: absolute;
-  inset: 0;
+  width: 58px;
+  height: 58px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 10px;
+  top: 10px;
 
-  font-size: 68px;
-  line-height: 1;
+  background:
+    radial-gradient(
+      circle at 32% 25%,
+      #ffffff 0%,
+      #ffeef5 12%,
+      #f9c9da 42%,
+      #f2a9c2 75%,
+      #e995b2 100%
+    );
 
-  color: #f7b6cc;
+  border-radius: 18px 50% 18px 50%;
 
-  text-shadow:
-    inset 0 3px 3px rgba(255,255,255,0.9),
-    0 3px 0 #e99ab6,
-    0 7px 10px rgba(150,70,100,0.25),
-    0 0 15px rgba(255,190,215,0.75);
+  transform: rotate(-45deg);
 
-  -webkit-text-stroke: 1px #eea7bd;
+  box-shadow:
+    inset 7px 7px 10px rgba(255,255,255,0.75),
+    inset -7px -8px 12px rgba(210,120,150,0.18),
+    0 5px 8px rgba(150,80,110,0.18);
 }
 
-/* Glossy highlight */
+/* The two rounded top bubbles */
 .game-heart::after {
-  content: "♡";
+  content: "";
 
   position: absolute;
 
-  left: 19px;
-  top: 12px;
+  width: 38px;
+  height: 38px;
 
-  font-size: 22px;
+  left: 4px;
+  top: 8px;
 
-  color: rgba(255,255,255,0.9);
+  background: #f9c9da;
 
-  transform: rotate(-20deg);
+  border-radius: 50%;
 
-  pointer-events: none;
+  box-shadow:
+    inset 5px 5px 8px rgba(255,255,255,0.7),
+    0 2px 4px rgba(180,100,130,0.12);
+
+  z-index: -1;
+}
+
+/* Puffy floating movement */
+@keyframes bubbleHeart {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-7px) scale(1.06);
+  }
 }
 
 .game-heart:hover {
   filter:
-    drop-shadow(0 10px 10px rgba(150, 70, 100, 0.25))
-    drop-shadow(0 0 20px rgba(255, 190, 215, 0.9));
+    drop-shadow(0 12px 10px rgba(160, 90, 115, 0.25))
+    drop-shadow(0 0 18px rgba(255, 205, 220, 0.8));
 
-  animation: heartWiggle 0.45s ease-in-out infinite;
+  animation: bubbleHeartHover 0.7s ease-in-out infinite;
 }
 
-@keyframes heartPulse {
+@keyframes bubbleHeartHover {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1.08) rotate(0deg);
   }
 
   50% {
-    transform: scale(1.08);
+    transform: scale(1.15) rotate(-3deg);
   }
-}
-
-@keyframes heartWiggle {
-  0%, 100% {
-    transform: rotate(0deg) scale(1.12);
-  }
-
-  25% {
-    transform: rotate(-6deg) scale(1.16);
-  }
-
-  75% {
-    transform: rotate(6deg) scale(1.16);
-  }
-}
-@keyframes heartWiggle {
-  0%, 100% {
-    transform: rotate(0deg) scale(1.15);
-  }
-
-  25% {
-    transform: rotate(-8deg) scale(1.2);
-  }
-
-  75% {
-    transform: rotate(8deg) scale(1.2);
-  }
-}
-    @media (max-width: 600px) {
+}  @media (max-width: 600px) {
       .hero h1 {
         font-size: 32px;
       }
