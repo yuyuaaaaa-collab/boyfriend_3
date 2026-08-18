@@ -205,26 +205,74 @@
   left: 50%;
   top: 50%;
 
+  width: 70px;
+  height: 70px;
+
   border: none;
   background: transparent;
 
-  color: #d9799e;
-  font-size: 52px;
+  color: #f7b6cc;
+  font-size: 0;
+
   cursor: pointer;
 
-  text-shadow:
-    0 0 8px rgba(217, 121, 158, 0.45),
-    0 0 18px rgba(217, 121, 158, 0.25);
+  filter:
+    drop-shadow(0 8px 8px rgba(150, 70, 100, 0.22))
+    drop-shadow(0 0 12px rgba(255, 190, 215, 0.65));
 
   animation: heartPulse 1.2s ease-in-out infinite;
 
-  transition:
-    left 0.35s ease,
-    top 0.35s ease,
-    transform 0.15s ease;
+  transition: left 0.35s ease, top 0.35s ease;
+}
+
+/* Creates the heart shape */
+.game-heart::before {
+  content: "♥";
+
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 68px;
+  line-height: 1;
+
+  color: #f7b6cc;
+
+  text-shadow:
+    inset 0 3px 3px rgba(255,255,255,0.9),
+    0 3px 0 #e99ab6,
+    0 7px 10px rgba(150,70,100,0.25),
+    0 0 15px rgba(255,190,215,0.75);
+
+  -webkit-text-stroke: 1px #eea7bd;
+}
+
+/* Glossy highlight */
+.game-heart::after {
+  content: "♡";
+
+  position: absolute;
+
+  left: 19px;
+  top: 12px;
+
+  font-size: 22px;
+
+  color: rgba(255,255,255,0.9);
+
+  transform: rotate(-20deg);
+
+  pointer-events: none;
 }
 
 .game-heart:hover {
+  filter:
+    drop-shadow(0 10px 10px rgba(150, 70, 100, 0.25))
+    drop-shadow(0 0 20px rgba(255, 190, 215, 0.9));
+
   animation: heartWiggle 0.45s ease-in-out infinite;
 }
 
@@ -234,10 +282,23 @@
   }
 
   50% {
-    transform: scale(1.15);
+    transform: scale(1.08);
   }
 }
 
+@keyframes heartWiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1.12);
+  }
+
+  25% {
+    transform: rotate(-6deg) scale(1.16);
+  }
+
+  75% {
+    transform: rotate(6deg) scale(1.16);
+  }
+}
 @keyframes heartWiggle {
   0%, 100% {
     transform: rotate(0deg) scale(1.15);
