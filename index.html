@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Boyfriend #3 ♡</title>
+  <title>♡ Boyfriend #3 ♡</title>
 
   <style>
     * {
@@ -13,117 +12,172 @@
 
     body {
       margin: 0;
-      background: #fff5f8;
-      color: #4a2635;
+      background: #fff4f8;
+      color: #472633;
       font-family: Georgia, "Times New Roman", serif;
-      overflow-x: hidden;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 780px;
       margin: auto;
-      padding: 60px 25px;
+      padding: 45px 22px 70px;
     }
 
-    .top {
+    .hero {
       text-align: center;
-      margin-bottom: 45px;
+      padding: 25px 10px 45px;
     }
 
-    .kitty {
-      font-size: 55px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 42px;
+    .hero h1 {
+      font-size: 43px;
       line-height: 1.15;
-      margin: 10px 0;
-      letter-spacing: 1px;
+      margin: 15px 0;
+    }
+
+    .hero-gif {
+      width: 170px;
+      max-height: 170px;
+      object-fit: contain;
+      border-radius: 20px;
     }
 
     .subtitle {
       font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-top: 15px;
+      opacity: 0.65;
     }
 
     .box {
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid #efb5c9;
-      border-radius: 22px;
+      position: relative;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid #edb4c9;
+      border-radius: 24px;
       padding: 30px;
       margin: 25px 0;
-      box-shadow: 0 10px 30px rgba(100, 40, 70, 0.08);
+      box-shadow: 0 12px 30px rgba(100,40,70,0.08);
     }
 
     h2 {
-      font-size: 25px;
       margin-top: 0;
+      font-size: 25px;
     }
 
     p {
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
-    .status {
+    .decoration {
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      object-fit: contain;
+      right: 18px;
+      top: 18px;
+    }
+
+    .feature-images {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .feature-images img {
+      width: 42%;
+      max-width: 250px;
+      border-radius: 18px;
+    }
+
+    .big-image {
+      display: block;
+      width: 180px;
+      max-height: 180px;
+      object-fit: contain;
+      margin: 20px auto;
+      border-radius: 20px;
+    }
+
+    .bug-image {
+      display: block;
+      width: 230px;
+      max-width: 90%;
+      max-height: 230px;
+      object-fit: contain;
+      margin: 25px auto 5px;
+      border-radius: 20px;
+    }
+
+    .card {
+      background: #fff0f5;
+      border: 2px solid #d9799e;
+      border-radius: 20px;
+      padding: 25px;
       text-align: center;
+      margin-top: 20px;
+    }
+
+    .card-title {
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      line-height: 2;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
-    .status strong {
-      color: #c24d7b;
+    .card-name {
+      font-size: 34px;
+      margin: 12px 0 20px;
     }
 
-    .changelog p {
-      margin: 12px 0;
+    .card p {
+      margin: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.5px;
     }
 
-    .features p {
-      margin: 8px 0;
+    .warning {
+      text-align: center;
+      border: 2px dashed #d9799e;
+    }
+
+    .warning img {
+      width: 110px;
+      margin-top: 10px;
     }
 
     .birthday {
       text-align: center;
+      padding: 40px 30px;
     }
 
-    .birthday p {
-      font-size: 17px;
-    }
-
-    .heart {
-      color: #d65b88;
-      font-size: 28px;
+    .birthday .heart {
+      font-size: 30px;
     }
 
     .footer {
       text-align: center;
-      margin-top: 45px;
       font-family: Arial, sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 2px;
-      opacity: 0.65;
-    }
-
-    .sparkle {
-      text-align: center;
-      font-size: 18px;
-      letter-spacing: 12px;
-      margin: 30px 0;
+      opacity: 0.55;
+      margin-top: 45px;
     }
 
     @media (max-width: 600px) {
-      h1 {
+      .hero h1 {
         font-size: 32px;
       }
 
       .box {
         padding: 23px;
+      }
+
+      .feature-images img {
+        width: 80%;
       }
     }
   </style>
@@ -131,130 +185,200 @@
 
 <body>
 
-  <div class="page">
+<div class="page">
 
-    <div class="top">
-      <div class="kitty">♡ 🎀 ♡</div>
+  <!-- OPENING -->
+  <section class="hero">
+    <img src="girl-heart.jpg" class="hero-gif" alt="Girl holding a heart">
 
-      <h1>HAPPY BIRTHDAY,<br>BOYFRIEND #3</h1>
+    <h1>♡ HAPPY BIRTHDAY,<br>BOYFRIEND #3 ♡</h1>
 
-      <div class="subtitle">
-        boyfriend-3.exe is currently running
+    <div class="subtitle">
+      boyfriend-3.exe is currently running
+    </div>
+  </section>
+
+
+  <!-- TRIAL -->
+  <section class="box">
+    <h2>Congratulations.</h2>
+
+    <p>
+      You have successfully completed the
+      <strong>2-week trial period</strong>
+      i forgot how many months ago lol
+    </p>
+
+    <p>
+      Unlike previous versions, you were not discontinued.
+    </p>
+
+    <p>
+      <strong>STATUS: PERMANENTLY INSTALLED</strong> (if you act right)
+    </p>
+
+    <img src="bunny-knife.jpg" class="decoration" alt="Pink bunny with a knife">
+  </section>
+
+
+  <!-- SYSTEM INFORMATION -->
+  <section class="box">
+    <img src="my-melody.jpg" class="decoration" alt="My Melody">
+
+    <h2>SYSTEM INFORMATION</h2>
+
+    <p><strong>Boyfriend version:</strong> 3.0</p>
+    <p><strong>Status:</strong> Running</p>
+    <p><strong>Compatibility:</strong> 99.9%</p>
+    <p><strong>Known bugs:</strong> Occasionally annoying</p>
+    <p><strong>Trial period:</strong> PASSED</p>
+    <p><strong>Last update:</strong> maybe march</p>
+  </section>
+
+
+  <!-- KNOWN FEATURES -->
+  <section class="box">
+    <h2>KNOWN FEATURES</h2>
+
+    <p>♡ makes me laugh (sometimes)</p>
+    <p>♡ listens to me yap</p>
+    <p>♡ survived my personalities</p>
+    <p>♡ somehow passed the trial</p>
+    <p>♡ idk</p>
+
+    <div class="feature-images">
+      <img src="hello-kitty.jpg" alt="Hello Kitty">
+      <img src="bunny-roll.gif" alt="Rolling bunny">
+    </div>
+  </section>
+
+
+  <!-- PREMIUM GIRLFRIEND CARD -->
+  <section class="box">
+    <h2>♡ PREMIUM GIRLFRIEND CARD ♡</h2>
+
+    <div class="card">
+
+      <div class="card-title">
+        GIRLFRIEND ACCESS CARD
       </div>
-    </div>
 
+      <div class="card-name">
+        YASMIN™
+      </div>
 
-    <div class="box">
-      <h2>Congratulations.</h2>
+      <p><strong>RARITY:</strong> LEGENDARY</p>
+      <p><strong>AVAILABILITY:</strong> LIMITED</p>
+      <p><strong>REPLACEMENT:</strong> IMPOSSIBLE</p>
+      <p><strong>REFUNDS:</strong> DENIED</p>
+      <p><strong>LUCK LEVEL:</strong> EXTREMELY HIGH</p>
+      <p><strong>STATUS:</strong> TAKEN</p>
+      <p><strong>AUTHORIZED USER:</strong> BOYFRIEND #3</p>
 
-      <p>
-        You have successfully completed the
-        <strong>2-week trial period</strong>
-        i forgot how many months ago lol
-      </p>
+      <img src="hello-kitty.jpg" class="big-image" alt="Girlfriend card decoration">
 
-      <p>
-        Unlike previous versions, you were not discontinued.
-      </p>
-
-      <p>
-        <strong>STATUS: PERMANENTLY INSTALLED</strong> (if you act right)
-      </p>
-    </div>
-
-
-    <div class="sparkle">
-      ♡ ✦ ♡ ✦ ♡
-    </div>
-
-
-    <div class="box status">
-      <h2>SYSTEM INFORMATION</h2>
-
-      <p><strong>Boyfriend version:</strong> 3.0</p>
-
-      <p><strong>Status:</strong> Running</p>
-
-      <p><strong>Compatibility:</strong> 99.9%</p>
-
-      <p><strong>Known bugs:</strong> Occasionally annoying</p>
-
-      <p><strong>Trial period:</strong> PASSED</p>
-
-      <p><strong>Last update:</strong> maybe march</p>
-    </div>
-
-
-    <div class="box changelog">
-      <h2>CHANGELOG</h2>
-
-      <p><strong>v1.0</strong> — We met</p>
-
-      <p><strong>v1.1</strong> — Two-week trial successfully completed</p>
-
-      <p><strong>v2.0</strong> — Relationship maybe officially installed</p>
-
-      <p><strong>v3.0</strong> — Somehow still here</p>
-
-      <p><strong>v3.1</strong> — Birthday update</p>
-    </div>
-
-
-    <div class="box features">
-      <h2>KNOWN FEATURES</h2>
-
-      <p>♡ makes me laugh (sometimes)</p>
-      <p>♡ listens to me yap</p>
-      <p>♡ survived my personalities</p>
-      <p>♡ somehow passed the trial</p>
-      <p>♡ idk</p>
-    </div>
-
-
-    <div class="box">
-      <h2>IMPORTANT SYSTEM MESSAGE</h2>
-
-      <p>
-        Despite extensive testing, boyfriend #3 remains operational.
-      </p>
-
-      <p>
-        Please do not let me uninstall.
-      </p>
-    </div>
-
-
-    <div class="box birthday">
-
-      <div class="heart">♡</div>
-
-      <h2>HAPPY BIRTHDAY</h2>
-
-      <p>
-        I feel like this relationship really stopped after the one-year
-        anniversary, sadly. But yeah, happy to meet that version of it
-        you made me fall in love with.
-      </p>
-
-      <p>
-        I hope this year is good to you and that you get everything
-        you're working for.
-      </p>
-
-      <p>
-        Happy birthday, boyfriend #3.
-      </p>
-
-      <div class="heart">♡</div>
+      <p><em>Please appreciate your privileges accordingly.</em></p>
 
     </div>
+  </section>
 
 
-    <div class="footer">
-      SYSTEM STATUS: STILL RUNNING ♡
-    </div>
+  <!-- CHANGELOG -->
+  <section class="box">
+    <h2>CHANGELOG</h2>
 
+    <p><strong>v1.0</strong> — We met</p>
+    <p><strong>v1.1</strong> — Two-week trial successfully completed</p>
+    <p><strong>v2.0</strong> — Relationship maybe officially installed</p>
+    <p><strong>v3.0</strong> — Somehow still here</p>
+    <p><strong>v3.1</strong> — Birthday update</p>
+
+    <img src="cat.gif" class="big-image" alt="Cat GIF">
+  </section>
+
+
+  <!-- KNOWN BUGS -->
+  <section class="box warning">
+    <h2>⚠ KNOWN BUGS ⚠</h2>
+
+    <p>
+      boyfriend occasionally malfunctions.
+    </p>
+
+    <p>
+      further testing required.
+    </p>
+
+    <img src="pokemon-cat.gif" class="bug-image" alt="Pokemon throwing a cat">
+
+    <p>
+      <strong>ERROR: CAT HAS BEEN THROWN.</strong>
+    </p>
+
+    <img src="meow-meow.jpg" class="bug-image" alt="Meow meow meme">
+  </section>
+
+
+  <!-- BLOCK WARNING -->
+  <section class="box">
+    <h2>UNINSTALL ATTEMPT DETECTED</h2>
+
+    <p>
+      Previous versions may have encountered this screen.
+    </p>
+
+    <img src="blocked.jpg" class="big-image" alt="Blocked sign">
+
+    <p>
+      <strong>ACCESS DENIED.</strong>
+    </p>
+  </section>
+
+
+  <!-- IMPORTANT MESSAGE -->
+  <section class="box birthday">
+
+    <div class="heart">♡</div>
+
+    <h2>IMPORTANT SYSTEM MESSAGE</h2>
+
+    <p>
+      Despite extensive testing, boyfriend #3 remains operational.
+    </p>
+
+    <p>
+      Please do not let me uninstall.
+    </p>
+
+    <div class="heart">♡</div>
+
+    <h2>HAPPY BIRTHDAY</h2>
+
+    <p>
+      I feel like this relationship really stopped after the one-year
+      anniversary, sadly. But yeah, happy to meet that version of it
+      you made me fall in love with.
+    </p>
+
+    <p>
+      I hope this year is good to you and that you get everything
+      you're working for.
+    </p>
+
+    <p>
+      Happy birthday, boyfriend #3.
+    </p>
+
+    <div class="heart">♡</div>
+
+  </section>
+
+
+  <div class="footer">
+    SYSTEM STATUS: STILL RUNNING ♡
   </div>
+
+</div>
 
 </body>
 </html>
