@@ -200,22 +200,57 @@
   margin-top: 20px;
 }
    
-    .game-heart {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border: none;
-      background: transparent;
-      color: #d9799e;
-      font-size: 45px;
-      cursor: pointer;
-      transition: transform 0.15s ease;
-    }
+   .game-heart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
 
-    .game-heart:hover {
-      transform: translate(-50%, -50%) scale(1.25);
-    }
+  border: none;
+  background: transparent;
+
+  color: #d9799e;
+  font-size: 52px;
+  cursor: pointer;
+
+  text-shadow:
+    0 0 8px rgba(217, 121, 158, 0.45),
+    0 0 18px rgba(217, 121, 158, 0.25);
+
+  animation: heartPulse 1.2s ease-in-out infinite;
+
+  transition:
+    left 0.35s ease,
+    top 0.35s ease,
+    transform 0.15s ease;
+}
+
+.game-heart:hover {
+  animation: heartWiggle 0.45s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes heartWiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1.15);
+  }
+
+  25% {
+    transform: rotate(-8deg) scale(1.2);
+  }
+
+  75% {
+    transform: rotate(8deg) scale(1.2);
+  }
+}
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 32px;
